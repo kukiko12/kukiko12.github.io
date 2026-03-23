@@ -100,11 +100,6 @@
       font-weight: 800;
     }
 
-    .hero h1 span {
-      display: block;
-      color: #94a3b8;
-    }
-
     .hero p {
       max-width: 640px;
       margin: 24px 0 0;
@@ -152,7 +147,8 @@
     .hero-card,
     .panel,
     .project-card,
-    .contact-card {
+    .contact-card,
+    .info-card {
       border: 1px solid var(--border);
       background: var(--panel);
       border-radius: var(--radius);
@@ -238,18 +234,12 @@
     }
 
     .projects-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .project-card,
     .info-card {
       padding: 24px;
-    }
-
-    .info-card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--panel);
     }
 
     .info-card h3,
@@ -307,6 +297,8 @@
     }
 
     .contact-link {
+      display: inline-flex;
+      align-items: center;
       padding: 12px 16px;
       border-radius: 18px;
       border: 1px solid rgba(255, 255, 255, 0.14);
@@ -381,9 +373,7 @@
       <div class="container hero-grid">
         <div>
           <p class="eyebrow">Personal Website</p>
-          <h1>
-            Experimental Particle Physics
-          </h1>
+          <h1>Experimental Particle Physics</h1>
           <p>
             I work on high-energy physics, data analysis, and detector-related problems. This site is a home for my research interests, selected projects, publications, and contact information.
           </p>
@@ -402,7 +392,7 @@
             <div class="mini-two">
               <div class="mini-card">
                 <p class="mini-label">Methods</p>
-                <p class="mini-value" style="font-size: 17px;">ROOT,ROOFit, C++, fitting, MC simulation</p>
+                <p class="mini-value" style="font-size: 17px;">ROOT, RooFit, C++, fitting, MC simulation</p>
               </div>
               <div class="mini-card">
                 <p class="mini-label">Interests</p>
@@ -410,9 +400,9 @@
               </div>
             </div>
             <div class="tip">
-              Tip: <a class="contact-link" href="https://inspirehep.net/authors/3093795" target="_blank">
-  🔬 INSPIRE-HEP
-</a>
+              <a class="contact-link" href="https://inspirehep.net/authors/3093795" target="_blank">
+                🔬 INSPIRE-HEP
+              </a>
             </div>
           </div>
         </div>
@@ -431,35 +421,39 @@
     </section>
 
     <section id="research">
-      <section id="projects">
-  <div class="container">
-    <div class="projects-grid">
       <div class="container three-grid">
         <div class="info-card">
           <h3>Research Interests</h3>
           <p>
-            Charm physics, semileptonic decays, detector optimization, statistical analysis, utilized machine learning methods to improve background discrimination and noise suppression.
+            Charm physics, semileptonic decays, detector optimization, statistical analysis, and machine learning methods for background discrimination and noise suppression.
           </p>
         </div>
+
         <div class="info-card">
           <h3>Publications</h3>
           <p>
-            List your paper title, journal, year, and a link to arXiv, Inspire, or DOI.
+            Q. Zhou, J. Wang, T. Luo, et al., “Prospects of |V<sub>us</sub>| and axial vector form factors in Λ → pe<sup>-</sup>ν̄<sub>e</sub> decay at STCF,” <i>Eur. Phys. J. C</i> 85, 1408 (2025). Q2.
           </p>
         </div>
+
         <div class="info-card">
           <h3>CV</h3>
           <p>
-            <a class="contact-link" href="CV_ZhouJunxian.pdf" target="_blank">
-  📄 Download CV
-</a>
+            <a class="contact-link" href="CV_ZhouJunxian.pdf" target="_blank">📄 Download CV</a>
           </p>
         </div>
       </div>
     </section>
-      <section id="projects">
-  <div class="container">
-    <div class="projects-grid">
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Selected Projects</h2>
+          </div>
+        </div>
+
+        <div class="projects-grid">
           <article class="project-card">
             <h3>Research Note / Publication</h3>
             <p>
@@ -472,14 +466,14 @@
           </article>
 
           <article class="project-card">
-            <h3>Technical Project</h3>
+            <h3>STCF Data Analysis</h3>
             <p>
-              Show a coding, simulation, or analysis project, such as reconstruction studies or fitting workflows.
+              Performed data analysis on charm-related processes using ROOT, RooFit, and C++ frameworks. Evaluated systematic uncertainties and applied machine learning methods for background suppression.
             </p>
             <div class="tags">
+              <span class="tag">ROOT</span>
               <span class="tag">C++</span>
-              <span class="tag">Python</span>
-              <span class="tag">Simulation</span>
+              <span class="tag">Machine Learning</span>
             </div>
           </article>
         </div>
@@ -490,13 +484,11 @@
       <div class="container">
         <div class="contact-card">
           <h2 class="section-title">Contact</h2>
-          <p class="section-text">
-          </p>
           <div class="contact-links">
             <a class="contact-link" href="mailto:24210200021@m.fudan.edu.cn">24210200021@m.fudan.edu.cn</a>
-            <a class="contact-link" href="https://orcid.org/0009-0001-1297-5361" target="_blank">
-  🧾 ORCID: 0009-0001-1297-5361
-</a>
+            <a class="contact-link" href="https://orcid.org/0009-0001-1297-5361" target="_blank">🧾 ORCID: 0009-0001-1297-5361</a>
+            <a class="contact-link" href="https://inspirehep.net/authors/3093795" target="_blank">🔬 INSPIRE</a>
+            <a class="contact-link" href="CV_ZhouJunxian.pdf" target="_blank">📄 CV</a>
           </div>
         </div>
       </div>
@@ -504,7 +496,7 @@
   </main>
 
   <footer class="footer">
-    <div class="container">© 2026 Your Name. Built for academic profile and research showcase.</div>
+    <div class="container">© 2026 Junxian Zhou. Built for academic profile and research showcase.</div>
   </footer>
 </body>
 </html>
